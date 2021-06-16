@@ -27,7 +27,7 @@ export default {
     mounted() {
 
     }
-}
+};
 </script>
 <style lang="less">
     .page-demo{

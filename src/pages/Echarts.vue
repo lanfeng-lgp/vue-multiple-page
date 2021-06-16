@@ -40,22 +40,6 @@ export default {
                 callbcak && callbcak(cityData);
             }
             return;
-
-            // let postData = {}
-            // this.$http.ajax("Get",postUrl,postData, function(Result) {
-            //     try {
-            //         Result = JSON.parse(Result);
-            //     } catch (e) {
-            //         Message.error({ message: 'json数据为Object' })
-            //     }
-            //     if (Result.status == "200") {
-            //         let resultData = Result.data;
-            //         callbcak && callbcak(resultData);
-            //     } else {
-            //         Message.error({ message: Result.message })
-            //     }
-            // }, true, true);
-
         },
         getMapData() {
             let _this = this;
@@ -382,7 +366,7 @@ export default {
         this.myCharts.showLoading();
         this.getMapData();
     }
-}
+};
 </script>
 <style lang="less">
 .page-echart {

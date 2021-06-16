@@ -139,7 +139,7 @@ export default {
     mounted() {
 
     }
-}
+};
 </script>
 <style lang="less">
 .page-table {

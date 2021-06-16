@@ -19,3 +19,19 @@ body{
 .t-right{
     text-align: end;
 }
+/* 定义margin padding 间距 
+ * 5~40 间隔5px定义类
+*/
+.generate-spacing(40);
+.generate-spacing(@n, @i: 5) when (@i =< @n) {
+  @spaceVal: 0px + @i;
+  .mx-@{i} {margin-left: @spaceVal; margin-right: @spaceVal; } 
+  .my-@{i} {margin-top: @spaceVal; margin-bottom: @spaceVal; } 
+  .mt-@{i} {margin-top: @spaceVal; } .mb-@{i} {margin-bottom: @spaceVal; } 
+  .ml-@{i} {margin-left:@spaceVal; } .mr-@{i} {margin-right: @spaceVal; }
+  .px-@{i} {padding-left: @spaceVal; padding-right: @spaceVal; } 
+  .py-@{i} {padding-top: @spaceVal; padding-bottom: @spaceVal; } 
+  .pt-@{i} {padding-top: @spaceVal; } .pb-@{i} {padding-bottom: @spaceVal; } 
+  .pl-@{i} {padding-left:@spaceVal; } .pr-@{i} {padding-right: @spaceVal; } 
+  .generate-spacing(@n, (@i+5));
+}

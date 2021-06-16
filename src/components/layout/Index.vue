@@ -26,14 +26,24 @@
                         <i class="el-icon-cloudy-and-sunny"></i>
                         <span slot="title">图集</span>
                     </el-menu-item>
-                    <el-menu-item index="3" route="/Echarts">
+                    <el-menu-item index="3" route="/echarts">
                         <i class="el-icon-lightning"></i>
                         <span slot="title">图表</span>
                     </el-menu-item>
-                    <el-menu-item index="4" route="/Table">
+                    <el-menu-item index="4" route="/table">
                         <i class="el-icon-lightning"></i>
                         <span slot="title">表单</span>
                     </el-menu-item>
+                    <el-submenu index="5">
+                        <template slot="title">
+                            <i class="el-icon-location"></i>
+                            <span>记录</span>
+                        </template>
+                        <el-menu-item-group>
+                            <el-menu-item index="5-1" route="/tab/table">表格</el-menu-item>
+                            <el-menu-item index="5-2" route="/tab/ul">列表</el-menu-item>
+                        </el-menu-item-group>
+                    </el-submenu>
                 </el-menu>
             </el-aside>
             <el-container>
@@ -89,7 +99,7 @@ export default {
       }
     },
     mounted() {},
-}
+};
 </script>
 <style lang="less">
 @headerHeight: 100px;
@@ -103,7 +113,7 @@ export default {
         top: 0;
         z-index: 1006;
         width: 100%;
-        background:skyblue;
+        background:#8fb1ff;
     }
     .layout-aside {
         position: fixed;

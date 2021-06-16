@@ -46,15 +46,10 @@ export default {
 
     },
     mounted() {
-        let postUrl = './src/assets/json/data1.json';
-        let postData = {};
-        this.$http.ajax("Get",postUrl,postData,function(result){
-            console.log(result);
-        },function(err){
-            console.log(err)
-        },true)
+        let resData = require('@/assets/json/data1.json');
+        console.log(resData)
     }
-}
+};
 </script>
 <style lang="less">
     .page-demo{

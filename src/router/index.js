@@ -10,13 +10,50 @@ let router = new Router({
       name: 'Home',
       component: () => import('@/pages/Home')
     },{
-      path: '/Echarts',
+      path: '/echarts',
+      meta:{
+        title:'图表',
+      },
       name: 'Echarts',
       component: () => import('@/pages/Echarts')
     },{
-      path: '/Table',
+      path: '/table',
+      meta:{
+        title:'表单',
+      },
       name: 'Table',
       component: () => import('@/pages/Table')
+    },{
+      path: '/detail/:id',
+      meta:{
+        title:'查看详情',
+      },
+      name: 'Detail',
+      component: () => import('@/pages/Detail'),
+      props:  { setDivProp: true,'data-id':'444' }
+    },{
+      path: '/tab',
+      name: 'TabList',
+      component: () => import('@/pages/TabList'),
+      children: [{
+          meta:{
+            title:'表格',
+          },
+          path: 'table',
+          component:  () => import('@/pages/list/TableList'),
+        },{
+          meta:{
+            title:'列表',
+          },
+          path: 'ul',
+          name: 'UlList',
+          component:  () => import('@/pages/list/UlList'),
+        },
+       ]
+    },{
+      path: '*',
+      name: '404',
+      component: () => import('@/pages/404')
     }
     // ...project
   ]
