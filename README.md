@@ -1,4 +1,4 @@
-# vueDemo2
+# vue-multiple-page
 >vue-cli创建一个后台管理框架，使用了多页面管理，添加了elementUI 框架；  
 >添加axios、echarts 扩展了一些方法；  
 >默认采用hash路由，使用history参考[路由配置](https://www.jianshu.com/p/f10185410770)。
